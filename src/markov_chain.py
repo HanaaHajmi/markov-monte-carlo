@@ -32,9 +32,8 @@ class MarkovChain:
         self.n = P.shape[0]
         self.states = states if states else [str(i) for i in range(self.n)]
 
-    # ------------------------------------------------------------------
     # Distribution stationnaire
-    # ------------------------------------------------------------------
+   
 
     def stationary_distribution(self) -> np.ndarray:
         """
@@ -48,10 +47,9 @@ class MarkovChain:
         pi = pi / pi.sum()
         return pi
 
-    # ------------------------------------------------------------------
+    
     # Simulation
-    # ------------------------------------------------------------------
-
+   
     def simulate(self, n_steps: int, start_state: int = 0, seed: int = None) -> np.ndarray:
         """
         Simule une trajectoire de longueur n_steps.
@@ -70,9 +68,9 @@ class MarkovChain:
 
         return trajectory
 
-    # ------------------------------------------------------------------
+
     # Convergence vers la distribution stationnaire
-    # ------------------------------------------------------------------
+
 
     def distribution_at_step(self, mu0: np.ndarray, n_steps: int) -> np.ndarray:
         """
@@ -108,10 +106,8 @@ class MarkovChain:
             mu = mu @ self.P
 
         return tvd
-
-    # ------------------------------------------------------------------
+        
     # Ergodicité : fréquences empiriques
-    # ------------------------------------------------------------------
 
     def empirical_frequencies(self, n_steps: int, start_state: int = 0, seed: int = None) -> np.ndarray:
         """
@@ -122,9 +118,8 @@ class MarkovChain:
         counts = np.bincount(traj, minlength=self.n)
         return counts / counts.sum()
 
-    # ------------------------------------------------------------------
     # Visualisation
-    # ------------------------------------------------------------------
+   
 
     def plot_convergence(self, mu0: np.ndarray, max_steps: int = 80, save_path: str = None):
         """
