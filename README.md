@@ -31,21 +31,6 @@ markov-monte-carlo/
 - **Théorème Central Limite** : illustration empirique sur distributions exponentielles et de Bernoulli
 - **Bootstrap** : calcul d'intervalles de confiance à 95% par rééchantillonnage
 
-## Installation
-
-```bash
-git clone https://github.com/<ton-username>/markov-monte-carlo.git
-cd markov-monte-carlo
-pip install -r requirements.txt
-```
-
-## Utilisation
-
-```bash
-python run_demo.py
-```
-
-Les figures sont sauvegardées dans `outputs/`.
 
 ### Utilisation de la classe MarkovChain
 
