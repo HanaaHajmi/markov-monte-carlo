@@ -23,10 +23,7 @@ print("=" * 60)
 print("  CHAÎNES DE MARKOV ET MONTE-CARLO")
 print("=" * 60)
 
-
-# -----------------------------------------------------------------------
 # PARTIE 1 : Chaîne de Markov simple (3 états)
-# -----------------------------------------------------------------------
 
 print("\n--- 1. Chaîne de Markov à 3 états ---")
 
@@ -60,9 +57,7 @@ mc.plot_stationary_comparison(n_steps=50_000, seed=0,
                                save_path="outputs/stationary_comparison.png")
 
 
-# -----------------------------------------------------------------------
 # PARTIE 2 : Chaîne de Markov — exemple file d'attente (M/M/1 discrète)
-# -----------------------------------------------------------------------
 
 print("\n--- 2. Chaîne de Markov — file d'attente (5 états) ---")
 
@@ -91,10 +86,7 @@ mu0_queue = np.array([0.0, 0.0, 1.0, 0.0, 0.0])
 mc_queue.plot_convergence(mu0_queue, max_steps=80,
                            save_path="outputs/convergence_queue.png")
 
-
-# -----------------------------------------------------------------------
 # PARTIE 3 : Monte-Carlo — estimation de π
-# -----------------------------------------------------------------------
 
 print("\n--- 3. Estimation de π par Monte-Carlo ---")
 
@@ -109,9 +101,7 @@ plot_pi_convergence(max_samples=100_000, step=500, seed=42,
                     save_path="outputs/pi_convergence.png")
 
 
-# -----------------------------------------------------------------------
 # PARTIE 4 : Intégration de Monte-Carlo
-# -----------------------------------------------------------------------
 
 print("\n--- 4. Intégration de Monte-Carlo ---")
 
@@ -127,9 +117,7 @@ est2, err2 = mc_integrate(g, 0, np.pi, n_samples=200_000, seed=1)
 print(f"  ∫_0^π sin(x) dx ≈ {est2:.6f}  ±  {err2:.6f}  (valeur exacte = 2.0)")
 
 
-# -----------------------------------------------------------------------
 # PARTIE 5 : Théorème Central Limite
-# -----------------------------------------------------------------------
 
 print("\n--- 5. Illustration du Théorème Central Limite ---")
 
@@ -150,9 +138,7 @@ illustrate_tcl(bernoulli_samples, "Bernoulli(0.3)", ns=[1, 10, 50, 300],
                save_path="outputs/tcl_bernoulli.png")
 
 
-# -----------------------------------------------------------------------
 # PARTIE 6 : Bootstrap
-# -----------------------------------------------------------------------
 
 print("\n--- 6. Intervalle de confiance par bootstrap ---")
 
